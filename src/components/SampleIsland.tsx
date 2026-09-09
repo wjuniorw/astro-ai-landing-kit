@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+
 import {titleStyle} from './Sample.css'
 
 export function SampleIsland() {

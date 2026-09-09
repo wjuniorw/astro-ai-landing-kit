@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css'
 
 export const titleStyle = style({
   color: 'tomato',
@@ -16,4 +16,4 @@ export const titleStyle = style({
       color: 'white'
     }
   }
-});
+})

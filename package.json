@@ -9,7 +9,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "pnpm lint:oxlint && pnpm lint:eslint",
+    "lint:eslint": "eslint .",
+    "lint:oxlint": "oxlint .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.5",
@@ -23,5 +27,16 @@
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.2",
+    "@commitlint/config-conventional": "^21.2.2",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^3.1.0",
+    "eslint-plugin-perfectionist": "^5.11.0",
+    "husky": "^9.1.7",
+    "oxlint": "^1.82.0",
+    "typescript-eslint": "^8.70.0"
   }
 }
