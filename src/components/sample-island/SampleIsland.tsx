@@ -1,7 +1,6 @@
-import { Button, Input } from '@core/ui'
+import { Button, Input, ThemeSwitcher } from '@core/ui'
 
 import { titleStyle } from './Sample.css'
-import { ThemeSwitcher } from './ThemeSwitcher'
 
 export function SampleIsland() {
   return (

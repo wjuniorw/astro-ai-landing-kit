@@ -1,13 +1,18 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Welcome from '@/components/Welcome.astro'
-import { SampleIsland } from '@/components/SampleIsland'
+import { SampleIsland } from '@/components/sample-island'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <SampleIsland client:load />
-    <Welcome />
+	<SampleIsland client:load />
+	
+	<div style="height: 150vh; display: flex; justify-content: center; align-items: center; padding: 20px; text-align: center;">
+		<p>👇 Role a página para baixo para ver o botão flutuante surgir! 👇</p>
+	</div>
+	
+	<Welcome />
 </Layout>
