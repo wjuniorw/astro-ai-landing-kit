@@ -1,4 +1,4 @@
-import { borderRadius, spacing, typography } from './shared'
+import { borderRadius, sizes, spacing, typography } from './shared'
 
 export const darkColors = {
   primary: '#3291ff',
@@ -26,6 +26,7 @@ export const darkTheme = {
   colors: darkColors,
   shadows: darkShadows,
   spacing,
+  sizes,
   typography,
   borderRadius,
 } as const

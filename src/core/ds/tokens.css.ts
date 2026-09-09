@@ -25,6 +25,10 @@ export const vars = createThemeContract({
     lg: '',
     xl: '',
   },
+  sizes: {
+    container: '',
+    header: '',
+  },
   typography: {
     fontFamily: '',
     fontSize: {

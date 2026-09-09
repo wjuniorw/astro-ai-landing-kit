@@ -24,3 +24,8 @@ export const borderRadius = {
   '2xl': '16px',
   full: '9999px',
 } as const
+
+export const sizes = {
+  container: '1200px',
+  header: '80px',
+} as const

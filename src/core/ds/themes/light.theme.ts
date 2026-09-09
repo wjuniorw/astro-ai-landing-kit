@@ -1,4 +1,4 @@
-import { borderRadius, spacing, typography } from './shared'
+import { borderRadius, sizes, spacing, typography } from './shared'
 
 export const lightColors = {
   primary: '#0070f3',
@@ -26,6 +26,7 @@ export const lightTheme = {
   colors: lightColors,
   shadows: lightShadows,
   spacing,
+  sizes,
   typography,
   borderRadius,
 } as const
