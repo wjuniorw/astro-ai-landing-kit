@@ -42,6 +42,7 @@ export function BackToTop() {
     <AnimatePresence>
       {isVisible && (
         <motion.button
+          key="back-to-top"
           aria-label="Back to top"
           className={backToTopButton}
           onClick={scrollToTop}

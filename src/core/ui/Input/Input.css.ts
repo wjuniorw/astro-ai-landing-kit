@@ -7,13 +7,15 @@ export const inputStyle = style({
   fontSize: vars.typography.fontSize.base,
   color: vars.colors.text,
   backgroundColor: vars.colors.background,
-  padding: `${vars.spacing.sm} ${vars.spacing.md}`,
-  borderRadius: vars.borderRadius.sm,
-  border: `1px solid ${vars.colors.text}`,
+  padding: `10px ${vars.spacing.md}`,
+  borderRadius: vars.borderRadius.lg,
+  border: `1px solid ${vars.colors.hoverTint}`, // Use tint instead of stark text color for borders
   outline: 'none',
-  transition: 'border-color 0.2s ease',
+  transition: 'all 0.2s ease',
+  boxShadow: vars.shadows.sm, // Inner subtle shadow effect usually good for inputs, or drop shadow
 
   ':focus': {
     borderColor: vars.colors.primary,
+    boxShadow: `0 0 0 1px ${vars.colors.primary}`, // focus ring
   },
 })

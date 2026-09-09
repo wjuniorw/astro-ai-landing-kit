@@ -8,9 +8,16 @@ export const vars = createThemeContract({
   colors: {
     primary: '',
     secondary: '',
+    primaryContrast: '',
     background: '',
     text: '',
+    success: '',
+    info: '',
+    warning: '',
+    danger: '',
     error: '',
+    hoverTint: '',
+    activeTint: '',
   },
   spacing: {
     sm: '',
@@ -28,10 +35,19 @@ export const vars = createThemeContract({
     },
   },
   borderRadius: {
+    none: '',
     sm: '',
     md: '',
     lg: '',
+    xl: '',
+    '2xl': '',
     full: '',
+  },
+  shadows: {
+    sm: '',
+    md: '',
+    lg: '',
+    glow: '',
   },
 })
 

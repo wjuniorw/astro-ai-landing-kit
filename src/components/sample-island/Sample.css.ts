@@ -14,8 +14,7 @@ export const titleStyle = style({
   transition: 'all 0.3s ease',
   selectors: {
     '&:hover': {
-      backgroundColor: vars.colors.primary,
-      color: vars.colors.background,
+      backgroundColor: vars.colors.hoverTint,
     },
   },
 })

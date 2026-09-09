@@ -10,18 +10,21 @@ export const backToTopButton = style({
   height: '48px',
   borderRadius: vars.borderRadius.full,
   backgroundColor: vars.colors.primary,
-  color: vars.colors.background,
+  color: vars.colors.primaryContrast,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   border: 'none',
   cursor: 'pointer',
-  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+  boxShadow: `${vars.shadows.lg}, ${vars.shadows.glow}`,
+  transition: 'box-shadow 0.2s ease, background-color 0.2s ease',
+  willChange: 'transform, opacity', // Force hardware acceleration
   zIndex: 50,
   
   selectors: {
     '&:hover': {
-      opacity: 0.9,
+      opacity: 1,
+      boxShadow: `${vars.shadows.lg}, ${vars.shadows.glow}, ${vars.shadows.glow}`, // Enhanced dynamic glow on hover
     },
   },
 })
