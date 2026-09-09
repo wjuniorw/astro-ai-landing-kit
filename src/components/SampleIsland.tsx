@@ -1,7 +1,15 @@
-import React from 'react'
+import { Button, Input } from '@core/ui'
 
-import {titleStyle} from './Sample.css'
+import { titleStyle } from './Sample.css'
 
 export function SampleIsland() {
-  return <div className={titleStyle}>Hello from React + Vanilla Extract Island! 🏝️</div>
+  return (
+    <div className={titleStyle}>
+      <p>Hello from React + Vanilla Extract Island! 🏝️</p>
+      <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginTop: '16px' }}>
+        <Input placeholder="Type something..." />
+        <Button onClick={() => alert('Button clicked!')}>Click me</Button>
+      </div>
+    </div>
+  )
 }

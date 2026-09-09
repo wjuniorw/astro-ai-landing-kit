@@ -40,7 +40,7 @@ export default tseslint.config(
             ['parent', 'sibling', 'index'],
             'unknown',
           ],
-          internalPattern: ['^@/.*'],
+          internalPattern: ['^@/.*', '^@core/.*'],
         },
       ],
     },
