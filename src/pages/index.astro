@@ -1,28 +1,12 @@
 ---
-import { Heading, Text } from '@core/ui'
+import { Hero } from '@/components/Hero'
 import Layout from '@/layouts/Layout.astro'
-import Welcome from '@/components/Welcome.astro'
-import { SampleIsland } from '@/components/sample-island';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-    <div style="height: 150vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; text-align: center; gap: 16px;">
-        <Heading as="h1" size="h1">
-            Bem-vindo ao Landing Template
-        </Heading>
-        <Heading as="h2" size="h3" color="primary">
-            A base perfeita para o seu projeto
-        </Heading>
-        <Text size="lg" color="text">
-            👇 Role a página para baixo para ver o botão flutuante surgir! 👇
-        </Text>
-        <Text size="sm" color="text">
-            Este é um exemplo de texto menor.
-        </Text>
-    </div>
-    <SampleIsland client:load />
-    <Welcome />
+    <Hero client:load />
+    <div style="height: 100vh" />
 </Layout>
