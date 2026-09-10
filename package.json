@@ -28,8 +28,13 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
+  "pnpm.onlyBuiltDependencies": [
+    "esbuild",
+    "workerd"
+  ],
   "allowScripts": {
-    "esbuild": true
+    "esbuild": true,
+    "workerd": true
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
