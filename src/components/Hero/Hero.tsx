@@ -39,8 +39,8 @@ export function Hero() {
 
           {/* CTAs */}
           <div className={buttonGroup}>
-            <Button>Get Started Free</Button>
-            <Button variant="ghost">Read the Docs</Button>
+            <Button as="a" href="/get-started" style={{ textDecoration: 'none' }}>Get Started Free</Button>
+            <Button as="a" href="/docs" variant="ghost" style={{ textDecoration: 'none' }}>Read the Docs</Button>
           </div>
         </div>
       </Container>

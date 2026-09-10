@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { Container, Section, Heading, Text, Button } from '@core/ui'
+---
+<Layout>
+  <Section style={{ minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
+    <Container>
+      <Heading as="h1" size="5xl" style={{ marginBottom: '24px', letterSpacing: '-0.02em' }}>Get Started</Heading>
+      <Text size="lg" color="text" style={{ marginBottom: '32px', opacity: 0.8, maxWidth: '600px' }}>
+        Follow these simple steps to start building your next high-converting landing page.
+      </Text>
+      
+      <div style={{ backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 40%, transparent)', padding: '32px', borderRadius: '16px', marginBottom: '32px', border: '1px solid var(--colors-hoverTint)' }}>
+        <Text size="base" color="text" style={{ fontFamily: 'monospace', lineHeight: '2' }}>
+          pnpm create astro@latest --template wjuniorw/astro-ai-landing-kit my-app<br/>
+          cd my-app<br/>
+          pnpm install<br/>
+          pnpm dev
+        </Text>
+      </div>
+
+      <div style={{ display: 'flex', gap: '16px' }}>
+        <Button as="a" href="/" variant="ghost" style={{ textDecoration: 'none' }}>← Back to Home</Button>
+        <Button as="a" href="/docs" style={{ textDecoration: 'none' }}>Read the Docs</Button>
+      </div>
+    </Container>
+  </Section>
+</Layout>

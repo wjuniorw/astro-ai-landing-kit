@@ -47,6 +47,6 @@ export default tseslint.config(
   },
   {
     // Ignore global dist and node_modules
-    ignores: ['dist/', 'node_modules/', '.astro/'],
+    ignores: ['dist/', 'node_modules/', '.astro/', '.agents/'],
   }
 )

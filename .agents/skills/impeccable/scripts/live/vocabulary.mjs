@@ -15,7 +15,7 @@
  * Add, rename, or reorder a verb here and all three follow.
  */
 
-const ICON_ATTRS = 'width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"';
+const ICON_ATTRS = 'width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display:block"'
 
 export const LIVE_COMMANDS = [
   { value: 'impeccable', label: 'Freeform',  icon: `<svg ${ICON_ATTRS}><path d="M4 20l4-1L18 9l-3-3L5 16z"/><path d="M14 7l3 3"/></svg>` },
@@ -30,7 +30,7 @@ export const LIVE_COMMANDS = [
   { value: 'animate',    label: 'Animate',   icon: `<svg ${ICON_ATTRS}><path d="M3 18c4-4 6-10 10-10"/><path d="M13 8c3 0 5 5 8 10"/><circle cx="13" cy="8" r="1.6" fill="currentColor" stroke="none"/></svg>` },
   { value: 'delight',    label: 'Delight',   icon: `<svg ${ICON_ATTRS}><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>` },
   { value: 'overdrive',  label: 'Overdrive', icon: `<svg ${ICON_ATTRS}><path d="M13 3L5 13h5l-1 8 9-12h-6z"/></svg>` },
-];
+]
 
 // Action values accepted by the live event protocol, in palette order.
-export const VISUAL_ACTIONS = LIVE_COMMANDS.map((c) => c.value);
+export const VISUAL_ACTIONS = LIVE_COMMANDS.map((c) => c.value)

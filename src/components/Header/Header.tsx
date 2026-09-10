@@ -18,7 +18,7 @@ export function Header() {
       <Container style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
         
         {/* Logo / Brand */}
-        <Text as="a" href="#" weight="bold" size="lg" color="text" style={{ textDecoration: 'none', letterSpacing: '-0.02em' }}>
+        <Text as="a" href="/" weight="bold" size="lg" color="text" style={{ textDecoration: 'none', letterSpacing: '-0.02em' }}>
           Landing<Text as="span" color="primary">Template</Text>
         </Text>
 
@@ -35,7 +35,7 @@ export function Header() {
         <div className={rightSection}>
           <ThemeSwitcher />
           <div className={navLinks}>
-            <Button style={{ padding: '8px 16px', fontSize: '14px' }}>
+            <Button as="a" href="/get-started" style={{ padding: '8px 16px', fontSize: '14px', textDecoration: 'none' }}>
               Get Started
             </Button>
           </div>
@@ -74,7 +74,7 @@ export function Header() {
               </a>
             ))}
             <div style={{ padding: '16px 24px' }}>
-              <Button style={{ width: '100%' }}>Get Started</Button>
+              <Button as="a" href="/get-started" style={{ width: '100%', textDecoration: 'none', textAlign: 'center' }}>Get Started</Button>
             </div>
           </motion.div>
         )}
