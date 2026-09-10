@@ -1,7 +1,9 @@
 ---
 import { FAQ } from '@/components/FAQ'
 import { Hero } from '@/components/Hero'
+import { Footer } from '@/components/Footer'
 import { Features } from '@/components/Features'
+import { Testimonials } from '@/components/Testimonials'
 import Layout from '@/layouts/Layout.astro'
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -11,6 +13,7 @@ import Layout from '@/layouts/Layout.astro'
 <Layout>
     <Hero client:load />
     <Features client:visible />
+    <Testimonials client:visible />
     <FAQ client:visible />
-    <div style="height: 100px" />
+    <Footer client:visible />
 </Layout>
