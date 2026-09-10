@@ -11,7 +11,7 @@ Built on an ultra-performant architecture using **Astro**, **React**, and **Vani
 Start a new project using this template instantly:
 
 ```bash
-pnpm create astro@latest --template wjuniorw/landing-template my-landing-page
+pnpm create astro@latest --template wjuniorw/astro-ai-landing-kit my-landing-page
 cd my-landing-page
 pnpm install
 pnpm dev
