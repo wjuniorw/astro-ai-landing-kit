@@ -26,7 +26,8 @@
     "framer-motion": "^13.2.0",
     "motion": "^13.2.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "wrangler": "^4.130.0"
   },
   "pnpm.onlyBuiltDependencies": [
     "esbuild",
