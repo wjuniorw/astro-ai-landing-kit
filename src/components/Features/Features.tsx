@@ -35,7 +35,7 @@ export function Features() {
           {features.map((f, i) => (
              <div key={i} className={featureCard}>
                 <div className={iconBox}>{f.icon}</div>
-                <Heading as="h3" size="h5" style={{ marginBottom: '8px' }}>
+                <Heading as="h3" size="xl" style={{ marginBottom: '8px' }}>
                   {f.title}
                 </Heading>
                 <Text color="text" style={{ opacity: 0.8, lineHeight: '1.6' }}>

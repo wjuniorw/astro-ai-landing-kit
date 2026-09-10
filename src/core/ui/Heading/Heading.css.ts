@@ -10,14 +10,9 @@ export const baseHeading = style({
   letterSpacing: '-0.02em', // Tighter letter spacing looks premium for large text
 })
 
-export const sizeVariants = styleVariants({
-  h1: { fontSize: vars.typography.fontSize['5xl'] }, // 64px
-  h2: { fontSize: vars.typography.fontSize['4xl'] }, // 48px
-  h3: { fontSize: vars.typography.fontSize['3xl'] }, // 32px
-  h4: { fontSize: vars.typography.fontSize['2xl'] }, // 24px
-  h5: { fontSize: vars.typography.fontSize.xl },     // 20px
-  h6: { fontSize: vars.typography.fontSize.lg },     // 18px
-})
+export const sizeVariants = styleVariants(vars.typography.fontSize, (size) => ({
+  fontSize: size,
+}))
 
 export const weightVariants = styleVariants({
   medium: { fontWeight: '500' },

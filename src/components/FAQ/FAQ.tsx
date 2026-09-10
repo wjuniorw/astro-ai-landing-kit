@@ -42,9 +42,8 @@ export function FAQ() {
                 <button
                   className={accordionButton}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  aria-expanded={isOpen}
                 >
-                  <Heading as="h3" size="h5" style={{ margin: 0 }}>
+                  <Heading as="h3" size="xl" style={{ margin: 0 }}>
                     {faq.q}
                   </Heading>
                   <motion.div

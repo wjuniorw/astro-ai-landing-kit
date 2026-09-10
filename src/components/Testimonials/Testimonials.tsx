@@ -39,7 +39,7 @@ export function Testimonials() {
               <div className={header}>
                 <div className={avatar}>{r.init}</div>
                 <div>
-                  <Heading as="h4" size="h6" style={{ marginBottom: '2px' }}>
+                  <Heading as="h4" size="lg" style={{ marginBottom: '2px' }}>
                     {r.name}
                   </Heading>
                   <Text size="sm" style={{ opacity: 0.6 }}>

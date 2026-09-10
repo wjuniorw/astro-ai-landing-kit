@@ -1,7 +1,8 @@
 ---
 import '@core/ds/tokens.css'
+import { Header } from '@components/Header'
+
 import { BackToTop } from '@core/ui'
-import { Header } from '@/components/Header'
 ---
 <!doctype html>
 <html lang="en">
@@ -27,8 +28,13 @@ import { Header } from '@/components/Header'
         <BackToTop client:load />
     </body>
 </html>
-
-<style>
+<style is:global>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
     html,
     body {
         margin: 0;
