@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 
 import { ToggleIcon } from '@core/ui/icons/ToggleIcon'
 
+import { themeSwitcherButton } from './ThemeSwitcher.css'
+
 export function ThemeSwitcher() {
   const [theme, setTheme] = useState<'dark' | 'light'>('light')
 
@@ -20,8 +22,15 @@ export function ThemeSwitcher() {
     localStorage.setItem('theme', nextTheme)
   }
   return (
-    <div title="Toggle Theme" style={{ display: 'inline-flex' }}>
-      <ToggleIcon isDark={theme === 'dark'} onClick={toggleTheme} />
-    </div>
+    <button
+      type="button"
+      role="switch"
+      onClick={toggleTheme}
+      aria-label="Toggle dark mode"
+      aria-checked={theme === 'dark'}
+      className={themeSwitcherButton}
+    >
+      <ToggleIcon isDark={theme === 'dark'} />
+    </button>
   )
 }

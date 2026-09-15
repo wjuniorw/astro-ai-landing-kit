@@ -45,7 +45,31 @@ export const navLink = style({
 export const rightSection = style({
   display: 'flex',
   alignItems: 'center',
+  gap: vars.spacing.lg,
+})
+
+export const searchTrigger = style({
+  display: 'flex',
+  alignItems: 'center',
   gap: vars.spacing.md,
+  padding: '6px 12px',
+  borderRadius: vars.borderRadius.lg,
+  backgroundColor: `color-mix(in srgb, ${vars.colors.hoverTint} 30%, transparent)`,
+  border: `1px solid ${vars.colors.hoverTint}`,
+  color: vars.colors.text,
+  cursor: 'pointer',
+  transition: 'all 0.2s ease',
+  
+  ':hover': {
+    borderColor: vars.colors.primary,
+    backgroundColor: `color-mix(in srgb, ${vars.colors.hoverTint} 50%, transparent)`,
+  },
+  
+  '@media': {
+    'screen and (max-width: 768px)': {
+      display: 'none', // Hide on small mobile
+    },
+  },
 })
 
 export const mobileHandle = style({
