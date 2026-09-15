@@ -34,7 +34,7 @@ export function Features() {
         <div className={grid}>
           {features.map((f, i) => (
              <div key={i} className={featureCard}>
-                <div className={iconBox}>{f.icon}</div>
+                <div className={iconBox} aria-hidden="true">{f.icon}</div>
                 <Heading as="h3" size="xl" style={{ marginBottom: '8px' }}>
                   {f.title}
                 </Heading>

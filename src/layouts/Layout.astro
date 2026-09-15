@@ -3,6 +3,16 @@ import '@core/ds/tokens.css'
 import { Header } from '@components/Header'
 
 import { BackToTop } from '@core/ui'
+
+interface Props {
+    title?: string
+    description?: string
+}
+
+const {
+    description = 'A modern, high-converting Astro & React landing page template.',
+    title = 'Ultimate Landing Page template',
+} = Astro.props
 ---
 <!doctype html>
 <html lang="en">
@@ -12,7 +22,8 @@ import { BackToTop } from '@core/ui'
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="generator" content={Astro.generator} />
-        <title>Ultimate Landing Page template</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <script is:inline>
             const savedTheme = localStorage.getItem('theme')
             if (savedTheme) {
@@ -23,8 +34,11 @@ import { BackToTop } from '@core/ui'
         </script>
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <Header client:load />
-        <slot />
+        <main id="main-content" tabindex="-1">
+            <slot />
+        </main>
         <BackToTop client:load />
     </body>
 </html>
@@ -40,5 +54,38 @@ import { BackToTop } from '@core/ui'
         margin: 0;
         width: 100%;
         height: 100%;
+    }
+    #main-content:focus {
+        outline: none;
+    }
+    .skip-link {
+        position: absolute;
+        top: -100px;
+        left: 16px;
+        background-color: var(--colors-primary);
+        color: var(--colors-primaryContrast);
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        z-index: 9999;
+        transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+        top: 16px;
+        outline: 2px solid var(--colors-text);
+        outline-offset: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto !important;
+        }
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
     }
 </style>

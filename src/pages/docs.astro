@@ -1,33 +1,68 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import { Container, Section, Heading, Text, Button } from '@core/ui'
+import { DocsSidebar } from '@/components/Docs'
+import { Button, Heading, Section, Text } from '@core/ui'
 ---
-<Layout>
-  <Section style={{ paddingTop: '120px', minHeight: '80vh' }}>
-    <Container>
-      <div style={{ marginBottom: '64px' }}>
-        <Heading as="h1" size="5xl" style={{ marginBottom: '16px', letterSpacing: '-0.02em' }}>Documentation</Heading>
+<Layout title="Documentation - Ultimate Landing Page Template" description="Learn how to install, configure, and build with the Ultimate Landing Page Template.">
+  <div style="display: flex; max-width: var(--sizes-container); margin: 0 auto;">
+    <DocsSidebar client:load />
+    
+    <Section style={{ flex: 1, paddingTop: '120px', paddingBottom: '120px', minHeight: '80vh', paddingLeft: '32px', paddingRight: '32px', overflowX: 'hidden' }}>
+      <div id="installing" style={{ scrollMarginTop: '120px', marginBottom: '64px' }}>
+        <Heading as="h1" size="5xl" style={{ marginBottom: '16px', letterSpacing: '-0.02em' }}>Installing</Heading>
         <Text size="lg" color="text" style={{ opacity: 0.8, maxWidth: '600px' }}>
-          Learn how to use the @core/ui design system primitives to build your pages rapidly.
+          Get up and running with the ultimate Astro & React launchpad in seconds.
+        </Text>
+        
+        <div style={{ marginTop: '24px', backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 40%, transparent)', padding: '32px', borderRadius: '16px', border: '1px solid var(--colors-hoverTint)' }}>
+          <Text size="base" color="text" style={{ fontFamily: 'monospace', lineHeight: '2' }}>
+            pnpm create astro@latest --template wjuniorw/astro-ai-landing-kit my-app<br/>
+            cd my-app<br/>
+            pnpm install<br/>
+            pnpm dev
+          </Text>
+        </div>
+      </div>
+
+      <div id="seo" style={{ scrollMarginTop: '120px', marginBottom: '64px' }}>
+        <Heading as="h2" size="4xl" style={{ marginBottom: '16px', letterSpacing: '-0.02em' }}>SEO & Meta Tags</Heading>
+        <Text size="lg" color="text" style={{ opacity: 0.8, maxWidth: '600px' }}>
+          Astro provides the perfect foundation for SEO. You can easily inject OpenGraph tags, dynamic Titles, and Twitter cards straight into your `Layout.astro` frontmatter.
         </Text>
       </div>
 
-      <Heading as="h2" size="3xl" style={{ marginBottom: '24px' }}>Typography</Heading>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '64px', padding: '32px', backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 20%, transparent)', borderRadius: '16px', border: '1px solid var(--colors-hoverTint)' }}>
-        <Heading size="4xl">This is a 4xl Heading</Heading>
-        <Text size="lg" color="primary">This is large primary text.</Text>
-        <Text size="sm" color="text" style={{ opacity: 0.6 }}>This is small muted text.</Text>
+      <div id="components" style={{ scrollMarginTop: '120px', marginBottom: '64px' }}>
+        <Heading as="h2" size="4xl" style={{ marginBottom: '24px', letterSpacing: '-0.02em' }}>Built-in Components</Heading>
+        
+        <Heading as="h3" size="3xl" style={{ marginBottom: '16px' }}>Typography</Heading>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', marginBottom: '32px', padding: '32px', backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 20%, transparent)', borderRadius: '16px', border: '1px solid var(--colors-hoverTint)' }}>
+          <Heading size="4xl">This is a 4xl Heading</Heading>
+          <Text size="lg" color="primary">This is large primary text.</Text>
+          <Text size="sm" color="text" style={{ opacity: 0.6 }}>This is small muted text.</Text>
+        </div>
+
+        <Heading as="h3" size="3xl" style={{ marginBottom: '16px' }}>Buttons</Heading>
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', padding: '32px', backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 20%, transparent)', borderRadius: '16px', border: '1px solid var(--colors-hoverTint)' }}>
+          <Button>Primary Button</Button>
+          <Button variant="ghost">Ghost Button</Button>
+        </div>
       </div>
 
-      <Heading as="h2" size="3xl" style={{ marginBottom: '24px' }}>Buttons</Heading>
-      <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', padding: '32px', backgroundColor: 'color-mix(in srgb, var(--colors-hoverTint) 20%, transparent)', borderRadius: '16px', border: '1px solid var(--colors-hoverTint)' }}>
-        <Button>Primary Button</Button>
-        <Button variant="ghost">Ghost Button</Button>
+      <div id="prompts" style={{ scrollMarginTop: '120px', marginBottom: '64px' }}>
+        <Heading as="h2" size="4xl" style={{ marginBottom: '16px', letterSpacing: '-0.02em' }}>AI Prompt Examples</Heading>
+        <Text size="lg" color="text" style={{ opacity: 0.8, maxWidth: '600px' }}>
+          Leverage the embedded skills in the `.agents/skills` folder. Try running this command in your IDE copilot:
+          <br/><br/>
+          <i>"Create a new section below the Hero that highlights our 3 core pricing tiers. Use the design tokens from `@core/ui`."</i>
+        </Text>
       </div>
-      
-      <div style={{ marginTop: '64px' }}>
-        <Button as="a" href="/" variant="ghost" style={{ textDecoration: 'none' }}>← Back to Home</Button>
+
+      <div id="troubleshooting" style={{ scrollMarginTop: '120px', marginBottom: '64px' }}>
+        <Heading as="h2" size="4xl" style={{ marginBottom: '16px', letterSpacing: '-0.02em' }}>Troubleshooting</Heading>
+        <Text size="lg" color="text" style={{ opacity: 0.8, maxWidth: '600px' }}>
+          If you encounter issues deploying to Cloudflare Pages related to the lockfile, ensure you run `pnpm install` locally before pushing to sync `pnpm-lock.yaml` with any package manager config updates.
+        </Text>
       </div>
-    </Container>
-  </Section>
+    </Section>
+  </div>
 </Layout>

@@ -40,7 +40,11 @@ export function FAQ() {
             return (
               <div key={index} className={accordionItem}>
                 <button
+                  type="button"
+                  aria-expanded={isOpen}
                   className={accordionButton}
+                  id={`faq-question-${index}`}
+                  aria-controls={`faq-answer-${index}`}
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                 >
                   <Heading as="h3" size="xl" style={{ margin: 0 }}>
@@ -52,7 +56,7 @@ export function FAQ() {
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
                     {/* Simple SVG Chevron */}
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </motion.div>
@@ -61,11 +65,14 @@ export function FAQ() {
                 <AnimatePresence initial={false}>
                   {isOpen && (
                     <motion.div
+                    role="region"
+                      id={`faq-answer-${index}`}
+                      style={{ overflow: 'hidden' }}
+                      exit={{ height: 0, opacity: 0 }}
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
+                      aria-labelledby={`faq-question-${index}`}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      style={{ overflow: 'hidden' }}
                     >
                       <div className={accordionContent}>
                         <Text>{faq.a}</Text>

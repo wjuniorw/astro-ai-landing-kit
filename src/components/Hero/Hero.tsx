@@ -9,8 +9,8 @@ export function Hero() {
       <Container>
         <div className={heroContent}>
           {/* Announcement Badge */}
-          <a href="#" className={badge}>
-            <span>🎉</span> Astro Template v1.0 is here <span>→</span>
+          <a href="/docs" className={badge}>
+            <span aria-hidden="true">🎉</span> Astro Template v1.0 is here <span aria-hidden="true">→</span>
           </a>
 
           {/* Main Headline */}

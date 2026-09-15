@@ -8,6 +8,7 @@ interface ToggleIconProps {
 export function ToggleIcon({ isDark, onClick }: ToggleIconProps) {
   return (
     <motion.svg
+      aria-hidden="true"
       width="48"
       height="28"
       viewBox="0 0 48 28"

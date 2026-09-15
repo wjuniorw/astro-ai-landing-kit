@@ -37,6 +37,14 @@ export const accordionButton = style({
   ':hover': {
     backgroundColor: vars.colors.hoverTint,
   },
+  ':focus': {
+    outline: 'none',
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '-2px',
+    backgroundColor: vars.colors.hoverTint,
+  },
 })
 
 export const accordionIcon = style({

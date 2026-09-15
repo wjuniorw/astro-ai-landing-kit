@@ -26,5 +26,10 @@ export const backToTopButton = style({
       opacity: 1,
       boxShadow: `${vars.shadows.lg}, ${vars.shadows.glow}, ${vars.shadows.glow}`, // Enhanced dynamic glow on hover
     },
+    '&:focus-visible': {
+      outline: `2px solid ${vars.colors.text}`,
+      outlineOffset: '3px',
+      opacity: 1,
+    },
   },
 })

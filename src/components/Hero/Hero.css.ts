@@ -51,6 +51,10 @@ export const badge = style({
     transform: 'translateY(-1px)',
     backgroundColor: `color-mix(in srgb, ${vars.colors.primary} 15%, transparent)`,
   },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
+  },
 })
 
 export const buttonGroup = style({

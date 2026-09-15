@@ -36,9 +36,15 @@ export const navLink = style({
   fontSize: vars.typography.fontSize.sm,
   fontWeight: '500',
   transition: 'color 0.2s ease',
+  borderRadius: vars.borderRadius.sm,
+  padding: '4px 8px',
   
   ':hover': {
     color: vars.colors.primary,
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
   },
 })
 
@@ -59,10 +65,17 @@ export const searchTrigger = style({
   color: vars.colors.text,
   cursor: 'pointer',
   transition: 'all 0.2s ease',
+  fontFamily: 'inherit',
+  fontSize: 'inherit',
   
   ':hover': {
     borderColor: vars.colors.primary,
     backgroundColor: `color-mix(in srgb, ${vars.colors.hoverTint} 50%, transparent)`,
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
+    borderColor: vars.colors.primary,
   },
   
   '@media': {
@@ -92,6 +105,14 @@ export const mobileHandle = style({
   cursor: 'pointer',
   color: vars.colors.text,
   zIndex: 90,
+  padding: 0,
+  fontFamily: 'inherit',
+  fontSize: 'inherit',
+  
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
+  },
   
   '@media': {
     'screen and (min-width: 768px)': {
@@ -131,5 +152,9 @@ export const mobileNavLink = style({
   
   ':active': {
     backgroundColor: vars.colors.hoverTint,
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '-2px',
   },
 })

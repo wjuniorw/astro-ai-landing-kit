@@ -66,4 +66,11 @@ export const footerLink = style({
     opacity: 1,
     color: vars.colors.primary,
   },
+  ':focus-visible': {
+    opacity: 1,
+    color: vars.colors.primary,
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
+    borderRadius: vars.borderRadius.sm,
+  },
 })

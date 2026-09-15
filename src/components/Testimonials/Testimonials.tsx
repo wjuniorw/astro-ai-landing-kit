@@ -37,7 +37,7 @@ export function Testimonials() {
           {reviews.map((r, i) => (
             <div key={i} className={card}>
               <div className={header}>
-                <div className={avatar}>{r.init}</div>
+                <div className={avatar} aria-hidden="true">{r.init}</div>
                 <div>
                   <Heading as="h4" size="lg" style={{ marginBottom: '2px' }}>
                     {r.name}
@@ -47,7 +47,9 @@ export function Testimonials() {
                   </Text>
                 </div>
               </div>
-              <Text style={{ opacity: 0.8, lineHeight: '1.6' }}>"{r.text}"</Text>
+              <blockquote style={{ margin: 0 }}>
+                <Text style={{ opacity: 0.8, lineHeight: '1.6' }}>"{r.text}"</Text>
+              </blockquote>
             </div>
           ))}
         </div>

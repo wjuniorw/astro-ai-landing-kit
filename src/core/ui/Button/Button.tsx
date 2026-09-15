@@ -13,14 +13,20 @@ export const Button = <C extends ElementType = 'button'>({
   as,
   children,
   className,
+  type,
   variant = 'primary',
   ...props
 }: ButtonProps<C>) => {
   const Component = as || 'button'
   const finalClass = [baseButton, buttonVariants[variant], className].filter(Boolean).join(' ')
+  const defaultType = Component === 'button' ? (type ?? 'button') : type
 
   return (
-    <Component className={finalClass} {...props}>
+    <Component
+      className={finalClass}
+      type={defaultType}
+      {...props}
+    >
       {children}
     </Component>
   )

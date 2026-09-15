@@ -11,6 +11,14 @@ export const baseButton = style({
   border: '1px solid transparent', // reserve space
   cursor: 'pointer',
   transition: 'all 0.2s ease',
+  
+  ':focus': {
+    outline: 'none',
+  },
+  ':focus-visible': {
+    outline: `2px solid ${vars.colors.primary}`,
+    outlineOffset: '2px',
+  },
 })
 
 export const buttonVariants = styleVariants({

@@ -18,7 +18,7 @@ export function Footer() {
           >
             Join thousands of developers building fast, beautiful landing pages with our modern template.
           </Text>
-          <Button style={{ padding: '12px 32px', fontSize: '16px' }}>
+          <Button as="a" href="/get-started" style={{ padding: '12px 32px', fontSize: '16px', textDecoration: 'none' }}>
             Start Building for Free
           </Button>
         </div>
@@ -29,20 +29,20 @@ export function Footer() {
             © {new Date().getFullYear()} LandingTemplate. All rights reserved.
           </Text>
           
-          <div className={linkGroup}>
+          <nav className={linkGroup} aria-label="Footer navigation">
             <a href="#" className={footerLink}>
               Privacy Policy
             </a>
             <a href="#" className={footerLink}>
               Terms of Service
             </a>
-            <a href="#" className={footerLink}>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={footerLink}>
               Twitter
             </a>
-            <a href="#" className={footerLink}>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={footerLink}>
               GitHub
             </a>
-          </div>
+          </nav>
         </div>
       </Container>
     </footer>
