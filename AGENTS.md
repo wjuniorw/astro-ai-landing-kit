@@ -2,6 +2,13 @@
 
 **Welcome, AI Assistant!** You are operating within the `landing-template`, a highly optimized boilerplate for building modern, high-converting landing pages and bootstrapping businesses.
 
+### 0. Project Constitution & Rules (CRITICAL)
+Before making architectural decisions, modifying the design system, or writing any code, **YOU MUST** read:
+- **The Project Constitution:** `.agent/CONSTITUITION.md`
+- **Specific Rule Files:** Located in `.agent/rules/` (e.g., `architecture.md`, `code-style.md`, `core-ui.md`, `design-system.md`, `seo-accessibility.md`, `styling.md`).
+
+Always adhere strictly to these guidelines.
+
 ### 1. Technology Stack & Rules
 - **Framework:** Astro (for zero-JS static structure) + React (for interactive `client:*` Islands).
 - **Styling:** Vanilla Extract (`.css.ts` files). **NEVER** use Tailwind, inline styles, or global CSS files for component styling.
