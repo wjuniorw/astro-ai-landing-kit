@@ -1,8 +1,7 @@
 {
   "name": "astro-ai-landing-kit",
   "type": "module",
-  "version": "0.0.1",
-  "packageManager": "pnpm@12.3.4",
+  "version": "1.0.1",
   "engines": {
     "node": ">=22.12.0"
   },
